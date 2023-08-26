@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filix-Tv</title>
+    <link rel="icon" type="image/x-icon" href="./images.pngs">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./App.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/">
+                <h1>Filix-Tv</h1>
+            </a>
+        </nav>
+    </header>
+    <main>
+        <section id="search-bar">
+            <input 
+                type="text"
+                id="search-bar--input" 
+                name="search"
+                placeholder="Search by name..."
+                autocomplete="off"
+            />
+            <!-- <button class="button" id="search-bar--button">Search</button> -->
+        </section>
+        <section id="sorting">
+            <button class="button button--light button--extra-width" id="sort-date">Sort By Date</button>
+            <button class="button button--light button--extra-width" id="sort-rate">Sort By Rating </button>
+        </section>
+        <section id="select">
+            <button class="button button--extra-height button--light active-tab" id="show-all">All</button>
+            <button class="button button--extra-height button--light" id="show-fav">Favorites</button>
+        </section>
+        <section id="movie-list">
+            
+        </section>
+        <section id="page">
+            <button class="button button--light button--extra-height" id="prev-page">Prev</button>
+            <button class="button button--light button--extra-height button--extra-width" id="curr-page">Current Page: 1</button>
+            <button class="button button--light button--extra-height" id="next-page">Next</button>
+        </section>
+    </main>
+</body>
+</html>

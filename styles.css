@@ -1,0 +1,235 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+background: rgb(232, 154, 36);
+}
+header{
+    background-color:  rgb(6, 1, 1);
+    padding: 24px;
+    text-align: left;
+}
+header nav a{
+    color: #dedada;
+    text-decoration: none;
+}
+#search-bar{
+    display: flex;
+    justify-content: right;
+    gap: 12px;
+    padding: 4px;
+    margin: 8px;
+    align-items: right;
+    /* flex-wrap: wrap; @330 */  /*media query at 310!-->*/
+}
+#search-bar--input{
+    width: 300px;
+    height: 32px;
+    border: 1px solid rgb(231, 134, 7);
+    border-radius: 4px;
+    padding-left: 8px;
+    overflow:hidden;
+    background-color: #dedada;
+}
+.button{
+    width: 100px;
+    height: 28px;
+    /* background-color: black; */
+    color: #dedada;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding:0px 4px;
+}
+#sorting{
+    display: flex;
+    justify-content: right;
+    gap: 12px;
+    margin: 4px 12px;
+}
+.fa-arrow-down, .fa-arrow-up{
+    color: rgb(228, 228, 38);
+}
+.button--light{
+    background-color:rgb(34, 34, 34);
+}
+.button--extra-width{
+    width: 148px;
+}
+#select{
+    display: flex;
+    justify-content:baseline; 
+    margin: 12px 60px;
+    gap: 12px;
+    /* flex-wrap: wrap; */
+}
+.button--extra-height{
+    height: 32px;
+}
+.active-tab{
+    background-color:rgb(169, 38, 38);
+}
+#movie-list {
+    display: flex;
+    gap: 16px 4px;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: #000000;
+}
+.movies-card{
+    /* box-shadow: 0px 0px 5px 0px rgb(17, 17, 17); */
+    margin: 4px 8px;
+    max-width: 240px;
+    height: 434px;
+    border-radius: 12px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    cursor: pointer;
+    
+}
+.movies-card:hover{
+    scale: 1.06;
+    transition: 0.5s;  
+}
+.movies-card::-webkit-scrollbar{
+    display: none;
+}
+.poster{
+    max-width: 240px;
+    height: 330px;
+    text-align: center;
+    
+    background-color: rgb(253, 160, 0);
+    
+    border-radius: 12px;
+    overflow: hidden;
+}
+.movie-poster{
+    line-height: 300px;
+    font-size: large;
+    max-width: 240px;
+    height: 330px;
+    object-fit: cover;
+}
+.movie-title{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 18px;
+    padding: 4px 4px;
+    font-weight: 600;
+    
+}
+.movie-card--footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px 8px;
+    font-size: 16px;
+}
+.fav-movie{
+    font-size: 30px;
+    cursor: pointer;
+}
+.fa-solid{
+    color: rgb(206, 52, 52);
+}
+.fa-arrow-down, .fa-arrow-up{
+    color: #000000;
+}
+.fav-movie-icon{
+    font-size: 24px;
+}
+.like-effect{
+    animation-name: effect;
+    animation-duration: 0.3s;
+}
+@keyframes effect {
+    0%{zoom: 0}
+    40%{zoom: 0.8}
+    70%{zoom: 1.1}
+    100%{zoom: 1}
+}
+#page{
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin: 32px 12px;
+}
+
+#rights{
+    color: #dedada;
+}
+@media only screen and (max-width : 775px){
+    
+    #movie-list{
+        display: grid;
+        margin-left: 8px;
+        margin-right: 8px;
+        grid-template-columns: repeat(3,1fr);
+    }
+    .movies-card:hover{
+        scale: 1;   
+    }
+    #select{
+        display: flex;
+        justify-content:center; 
+        
+        flex-wrap: wrap;
+    }  
+    #sorting{
+        flex-wrap: wrap;
+    }
+    #page{
+        flex-wrap: wrap;
+    }
+    .movies-card{
+        margin: 4px 2px;
+    }
+    .movie-poster{
+        font-size: 12px;
+    }
+}
+@media only screen and (max-width : 570px){
+
+    #movie-list{
+        display: flex;
+    }
+    .movie-poster{
+        font-size: large;
+    }
+   
+}
+@media only screen and (max-width : 510px){
+
+    #movie-list{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .movie-poster{
+        font-size: 12px;
+    }
+    
+}
+@media only screen and (max-width : 395px){
+
+    #movie-list{
+        display: flex;
+        margin: 0px 12px;
+    }
+    .movies-card{
+        max-width: 340px;
+        min-height: 560px;
+    }
+    .poster{
+        max-width: 340px;
+        min-height: 470px;
+    }
+    .movie-poster{
+        max-width: 340px;
+        min-height: 470px;
+        font-size: large;
+    }
+}
